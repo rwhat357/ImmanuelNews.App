@@ -5,7 +5,7 @@ ImmanuelNews
 ImmanuelNews is a site that displays the latest news according to your location.
 
 ### Overview
-This project is composed of two projects the frontend and the backend. Each project has its own GitHub repo.
+This project is composed of two projects: the frontend and the backend. Each project has its own GitHub repo.
 The front-end is build with AngularJS and the backend is build with C# WebApi.
 
 Both projects run in Azure here:
@@ -33,5 +33,5 @@ Both projects run in Azure here:
 
 ### Miscellaneous
 
-- For out Frontend, we use [John Papa's AngularJS style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md). 
+- For out frontend, we use [John Papa's AngularJS style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md). 
 - For our SCM, we use [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). So, all pull requests must be done to `develop` branch.
