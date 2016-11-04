@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="app">
+
 <head>
 	<title>Immanuel News</title>
 	<link rel="stylesheet" href="vendorScripts/bootstrap/css/bootstrap.css">
@@ -7,23 +8,56 @@
 
 	<link rel="stylesheet" href="app/common/common.css">
 </head>
+
 <body>
-	
-	Write some text in textbox:
-	<input type="text" ng-model="sometext" />
 
-	<h1>Hello {{ sometext }}</h1>
-	
-	
-	<p>GitHub Project:<a href="https://github.com/rwhat357/ImmanuelNews.App"> https://github.com/rwhat357/ImmanuelNews.App</a></p>
+    <!-- Single button -->
+    <div class="btn-group" uib-dropdown is-open="status.isopen">
+      <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+        Button dropdown <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+        <li role="menuitem"><a href="#">ACTION</a></li>
+        <li role="menuitem"><a href="#">Another action</a></li>
+        <li role="menuitem"><a href="#">Somet asdf hing else here</a></li>
+        <li role="menuitem"><a href="#">Separate asa d link</a></li>
+		<li role="menuitem"><a href="#">Actio asd  n</a></li>
+        <li role="menuitem"><a href="#">Another action</a></li>
+        <li role="menuitem"><a href="#">Something else here</a></li>
+        <li role="menuitem"><a href="#">Separated link</a></li>
+        <li role="menuitem"><a href="#">Action</a></li>
+        <li role="menuitem"><a href="#">Another action</a></li>
+        <li role="menuitem"><a href="#">Something else here</a></li>
+        <li role="menuitem"><a href="#">Separated link</a></li>
+      </ul>
+    </div>
 
+
+	<!--<div ng-include="app/common/header.html"></div>-->
+	
+	<div ng-controller="HomeController as vm">
+		Write some text in textbox:
+		<input type="text" ng-model="vm.sometext" />
+
+		<h1>Hello {{ vm.someText }}</h1>
+	</div>
+
+	<footer>
+		<p>&copy; 2015 ImmanuelNews.com<p>
+		<p>GitHub Project:<a href="https://github.com/rwhat357/ImmanuelNews.App"> https://github.com/rwhat357/ImmanuelNews.App</a></p>
+	</footer>
+
+	<!-- vendor scripts -->
 	<script src="vendorScripts/jquery.min.js"></script>
 	<script src="vendorScripts/bootstrap/bootstrap.min.js"></script>
 	<script src="vendorScripts/angular.js"></script>
 	<script src="vendorScripts/underscore.js"></script>
-
-	<script src="index.js"></script>
+	<script src="vendorScripts/ui-bootstrap.min.js"></script>
+	<!-- app scripts -->
+	<script src="app.js"></script>
+	<!--<script src="app/home/home.js"></script>-->
 
 
 </body>
+
 </html>
